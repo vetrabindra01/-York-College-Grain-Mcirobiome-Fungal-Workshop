@@ -15,7 +15,7 @@ RP (position: 2390-2409 bp), ITS4r: TCCTCCGCTTATTGATATGC
 
 Maximum length: 2409-2024 = 385 bp
 
-# Commands
+# Core diversity analysis
 The mycobiome analysis was adapted from the following tutorials.
 1. [Fungal ITS analysis tutorial](https://forum.qiime2.org/t/fungal-its-analysis-tutorial/7351).
 2. [Processing ITS sequences with QIIME2 and DADA2](https://john-quensen.com/tutorials/processing-its-sequences-with-qiime2-and-dada2/).
@@ -114,7 +114,7 @@ qiime diversity core-metrics-phylogenetic \
   --output-dir diversity-core-metrics-phylogenetic
 ```
 
-# Calssify the representative sequences
+# Buliding feature classifier for funtal ITS
 
 Downlaod the [Taxonomy files](https://unite.ut.ee/repository.php).
 1) Import the UNITE reference sequences into QIIME2.
