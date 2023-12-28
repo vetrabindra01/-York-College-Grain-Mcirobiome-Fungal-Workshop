@@ -15,6 +15,10 @@ RP (position: 2390-2409 bp), ITS4r: TCCTCCGCTTATTGATATGC
 
 Maximum length: 2409-2024 = 385 bp
 
+# Commands
+The mycobiome analysis was adapted from the following tutorial.
+[Fungal ITS analysis tutorial](https://forum.qiime2.org/t/fungal-its-analysis-tutorial/7351).
+
 
 
 
