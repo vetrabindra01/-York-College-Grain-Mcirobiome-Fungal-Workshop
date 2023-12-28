@@ -42,7 +42,16 @@ qiime cutadapt trim-paired \
   --o-trimmed-sequences trimmed-demux-paried-end.qza \
   --p-discard-untrimmed --p-match-read-wildcards    
 ```
-
+4) copy demultiplexed file.
+```
+cp trimmed-demux-paried-end.qza demux.qza 
+```
+5) Generate a summary of demultiplexing results.
+```
+qiime demux summarize \
+  --i-data demux.qza \
+  --o-visualization demux.qzv
+```
 
 
 
