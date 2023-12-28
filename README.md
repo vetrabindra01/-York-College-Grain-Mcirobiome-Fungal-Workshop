@@ -74,12 +74,36 @@ qiime metadata tabulate \
   --m-input-file stats-dada2.qza \
   --o-visualization stats-dada2.qzv
 ```
+View stats-dada2.qzv file and download metadata tsv file. Rename it as sample-metadata.tsv. Add a description column in the last column.
+
 9) Rename files for easy to use commands.
 ```
 mv rep-seqs-dada2.qza rep-seqs.qza
 mv table-dada2.qza table.qza
 ```
 
+10) Summarize feature table.
+```
+qiime feature-table summarize \
+  --i-table table.qza \
+  --o-visualization table.qzv \
+  --m-sample-metadata-file sample-metadata.tsv
+```
+11) Visualize representative sequences.
+```
+qiime feature-table tabulate-seqs \
+  --i-data rep-seqs.qza \
+  --o-visualization rep-seqs.qzv
+```
+12) Make tree files for phylogenetic analysis.
+```
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences rep-seqs.qza \
+  --o-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza \
+  --o-rooted-tree rooted-tree.qza
+```
 
 
 
