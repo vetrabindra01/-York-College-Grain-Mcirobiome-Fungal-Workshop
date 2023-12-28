@@ -107,7 +107,7 @@ qiime phylogeny align-to-tree-mafft-fasttree \
 13) Core diversity analysis
 ```
 qiime diversity core-metrics-phylogenetic \
-  --i-phylogeny rooted-tree.qza \ 
+  --i-phylogeny rooted-tree.qza \
   --i-table table.qza \
   --p-sampling-depth 99000 \
   --m-metadata-file sample-metadata.tsv \
