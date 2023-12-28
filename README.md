@@ -9,11 +9,11 @@ Mycobiome was profiled in rye, wheat, and rye+wheat that are used as a starting 
 
 Region: ITS2 ([ITS as an environmental DNA barcode for fungi](https://bmcmicrobiol.biomedcentral.com/articles/10.1186/1471-2180-10-189)).
 
-FP (2024-2045bp), ITS3f: GCATCGATGAAGAACGCAG
+FP (position: 2024-2045 bp), ITS3f: GCATCGATGAAGAACGCAG
 
-RP (2390-2409bp), ITS4r: TCCTCCGCTTATTGATATGC
+RP (position: 2390-2409 bp), ITS4r: TCCTCCGCTTATTGATATGC
 
-Maximum length: 2409-2024 = 385bp
+Maximum length: 2409-2024 = 385 bp
 
 
 
