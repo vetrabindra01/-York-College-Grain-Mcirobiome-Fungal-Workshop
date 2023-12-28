@@ -104,6 +104,15 @@ qiime phylogeny align-to-tree-mafft-fasttree \
   --o-tree unrooted-tree.qza \
   --o-rooted-tree rooted-tree.qza
 ```
+13) Core diversity analysis
+```
+qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny rooted-tree.qza \ 
+  --i-table table.qza \
+  --p-sampling-depth 99000 \
+  --m-metadata-file sample-metadata.tsv \
+  --output-dir diversity-core-metrics-phylogenetic
+```
 
 
 
