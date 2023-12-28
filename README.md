@@ -114,7 +114,7 @@ qiime diversity core-metrics-phylogenetic \
   --output-dir diversity-core-metrics-phylogenetic
 ```
 
-# Buliding feature classifier for funtal ITS
+# Buliding feature classifier for fungal ITS
 
 Downlaod the [Taxonomy files](https://unite.ut.ee/repository.php).
 1) Import the UNITE reference sequences into QIIME2.
