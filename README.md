@@ -1,1 +1,1 @@
-# -York-College-Grain-Mcirobiome-Fungal-Workshop
+# York College Grain Mcirobiome Fungal Workshop
