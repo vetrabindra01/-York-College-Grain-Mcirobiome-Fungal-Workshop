@@ -135,9 +135,9 @@ qiime tools import \
 3) Train the classifier
 
    
-Classification of fungal ITS sequences
-
-"In our experience, fungal ITS classifiers trained on the UNITE reference database do NOT benefit from extracting/trimming reads to primer sites. We recommend training UNITE classifiers on the full reference sequences. Furthermore, we recommend the “developer” sequences (located within the QIIME-compatible release download) because the standard versions of the sequences have already been trimmed to the ITS region (excluding portions of flanking rRNA genes that may be present in amplicons generated with standard ITS primers)".[Link](https://docs.qiime2.org/2023.9/tutorials/feature-classifier/)
+## Classification of fungal ITS sequences
+[Link](https://docs.qiime2.org/2023.9/tutorials/feature-classifier/).
+"In our experience, fungal ITS classifiers trained on the UNITE reference database do NOT benefit from extracting/trimming reads to primer sites. We recommend training UNITE classifiers on the full reference sequences. Furthermore, we recommend the “developer” sequences (located within the QIIME-compatible release download) because the standard versions of the sequences have already been trimmed to the ITS region (excluding portions of flanking rRNA genes that may be present in amplicons generated with standard ITS primers)".
 
 ```
 qiime feature-classifier fit-classifier-naive-bayes \
