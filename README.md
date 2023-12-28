@@ -114,5 +114,7 @@ qiime diversity core-metrics-phylogenetic \
   --output-dir diversity-core-metrics-phylogenetic
 ```
 
-# [Taxonomy classifier](https://unite.ut.ee/repository.php)
+# Calssify the representative sequences
+
+[Taxonomy classifier](https://unite.ut.ee/repository.php)
 
