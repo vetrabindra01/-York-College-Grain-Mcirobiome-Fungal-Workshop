@@ -7,7 +7,7 @@ Mycobiome was profiled in rye, wheat, and rye+wheat that are used as a starting 
 
 # Primers
 
-Region: ITS2 [ITS as an environmental DNA barcode for fungi](https://bmcmicrobiol.biomedcentral.com/articles/10.1186/1471-2180-10-189).
+Region: ITS2 ([ITS as an environmental DNA barcode for fungi](https://bmcmicrobiol.biomedcentral.com/articles/10.1186/1471-2180-10-189)).
 
 FP, ITS3f: GCATCGATGAAGAACGCAG
 
