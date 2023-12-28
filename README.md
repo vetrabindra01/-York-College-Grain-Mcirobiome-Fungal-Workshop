@@ -20,6 +20,18 @@ The mycobiome analysis was adapted from the following tutorials.
 1. [Fungal ITS analysis tutorial](https://forum.qiime2.org/t/fungal-its-analysis-tutorial/7351).
 2. [Processing ITS sequences with QIIME2 and DADA2](https://john-quensen.com/tutorials/processing-its-sequences-with-qiime2-and-dada2/).
 
+1) Activate qiime2 using conda.
+```
+conda activate qiime2-amplicon-2023.9
+```
+2) Import using input format Laneless.
+```
+qiime tools import \
+  --type 'SampleData[PairedEndSequencesWithQuality]' \
+  --input-path laneless \
+  --input-format CasavaOneEightLanelessPerSampleDirFmt \
+  --output-path demux-paired-end.qza
+```
 
 
 
