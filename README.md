@@ -30,7 +30,7 @@ conda activate qiime2-amplicon-2023.9
 qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
   --input-path laneless \
-  --input-format CasavaOneEightLanelessPerSampleDirFmt \
+  --input-format PairedEndFastqManifestPhred33V2 \
   --output-path demux-paired-end.qza
 ```
 
