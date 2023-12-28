@@ -5,7 +5,7 @@ Mycobiome was profiled in rye, wheat, and rye+wheat that are used as a starting 
 
 <img width="170" alt="image" src="https://github.com/vetrabindra01/YorkCollege-Grain-Mcirobiome-Fungal-Workshop/assets/97687143/9fb51be3-a978-4d4e-9a22-d58ac7634bf9">
 
-#Primers:
+# Primers
 Region: ITS2
 FP, ITS3f: GCATCGATGAAGAACGCAG
 RP, ITS4r: TCCTCCGCTTATTGATATGC
