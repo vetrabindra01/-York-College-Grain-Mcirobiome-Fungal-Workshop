@@ -30,10 +30,18 @@ conda activate qiime2-amplicon-2023.9
 qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
   --input-path ITSReads \
-  --input-format PairedEndFastqManifestPhred33V2 \
+  --input-format CasavaOneEightLanelessPerSampleDirFmt \
   --output-path demux-paired-end.qza
 ```
-
+3) Trim adapters.
+```
+qiime cutadapt trim-paired \
+  --i-demultiplexed-sequences demux-paried-end.qza \
+  --p-front-f GCATCGATGAAGAACGCAG \
+  --p-front-r TCCTCCGCTTATTGATATGC \
+  --o-trimmed-sequences trimmed-demux-paried-end.qza \
+  --p-discard-untrimmed --p-match-read-wildcards    
+```
 
 
 
