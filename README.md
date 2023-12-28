@@ -8,5 +8,9 @@ Mycobiome was profiled in rye, wheat, and rye+wheat that are used as a starting 
 # Primers
 
 Region: ITS2
+
 FP, ITS3f: GCATCGATGAAGAACGCAG
+
 RP, ITS4r: TCCTCCGCTTATTGATATGC
+
+
