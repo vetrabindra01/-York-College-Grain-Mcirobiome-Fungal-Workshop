@@ -135,17 +135,10 @@ qiime tools import \
 3) Train the classifier
 ```
 qiime feature-classifier fit-classifier-naive-bayes \
---i-reference-reads unite-ver8-seqs_99_04.02.2020.qza \
---i-reference-taxonomy unite-ver8-taxonomy_99_04.02.2020.qza \
---o-classifier unite-ver8-99-classifier-04.02.2020.qza
-```
-```
-qiime feature-classifier fit-classifier-naive-bayes \
---i-reference-reads sh_refs_qiime_ver9_dynamic_25.07.2023.qza  \
+--i-reference-reads sh_refs_qiime_ver9_dynamic_25.07.2023.qza \
 --i-reference-taxonomy sh_taxonomy_qiime_ver9_dynamic_25.07.2023.qza \
 --o-classifier classifier-sh_refs_qiime_ver9_dynamic_25.07.2023.qza
 ```
-
 
 
 
