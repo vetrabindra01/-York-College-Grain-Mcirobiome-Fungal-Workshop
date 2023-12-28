@@ -116,6 +116,50 @@ qiime diversity core-metrics-phylogenetic \
 
 # Calssify the representative sequences
 
-Downlaod the [Taxonomy classifier](https://unite.ut.ee/repository.php).
+Downlaod the [Taxonomy files](https://unite.ut.ee/repository.php).
+1) Import the UNITE reference sequences into QIIME2.
+```
+qiime tools import \
+  --input-path sh_refs_qiime_ver9_dynamic_25.07.2023.fasta \
+  --output-path sh_refs_qiime_ver9_dynamic_25.07.2023.qza \
+  --type 'FeatureData[Sequence]'
+```
+2) Import the taxonomy file
+```
+qiime tools import \
+--type 'FeatureData[Taxonomy]' \
+--input-path sh_taxonomy_qiime_ver9_dynamic_25.07.2023.txt \
+--output-path sh_taxonomy_qiime_ver9_dynamic_25.07.2023.qza  \
+--input-format HeaderlessTSVTaxonomyFormat
+```
+3) Train the classifier
+```
+qiime feature-classifier fit-classifier-naive-bayes \
+--i-reference-reads unite-ver8-seqs_99_04.02.2020.qza \
+--i-reference-taxonomy unite-ver8-taxonomy_99_04.02.2020.qza \
+--o-classifier unite-ver8-99-classifier-04.02.2020.qza
+```
+```
+qiime feature-classifier fit-classifier-naive-bayes \
+--i-reference-reads sh_refs_qiime_ver9_dynamic_25.07.2023.qza  \
+--i-reference-taxonomy sh_taxonomy_qiime_ver9_dynamic_25.07.2023.qza \
+--o-classifier classifier-sh_refs_qiime_ver9_dynamic_25.07.2023.qza
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
