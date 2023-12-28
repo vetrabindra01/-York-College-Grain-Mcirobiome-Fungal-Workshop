@@ -116,5 +116,6 @@ qiime diversity core-metrics-phylogenetic \
 
 # Calssify the representative sequences
 
-[Taxonomy classifier](https://unite.ut.ee/repository.php)
+Downlaod the [Taxonomy classifier](https://unite.ut.ee/repository.php).
+
 
