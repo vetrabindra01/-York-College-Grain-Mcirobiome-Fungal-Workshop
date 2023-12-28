@@ -52,7 +52,33 @@ qiime demux summarize \
   --i-data demux.qza \
   --o-visualization demux.qzv
 ```
-
+6) View demux file
+```
+qiime tools view demux.qzv
+```
+7) Sequence quality control and feature table construction using DADA2.
+```
+qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux.qza \
+  --p-trim-left-f 0 \
+  --p-trim-left-r 0 \
+  --p-trunc-len-f 280 \
+  --p-trunc-len-r 180 \
+  --o-representative-sequences rep-seqs-dada2.qza \
+  --o-table table-dada2.qza \
+  --o-denoising-stats stats-dada2.qza
+```
+8) Visualize dada2 stats.
+```
+qiime metadata tabulate \
+  --m-input-file stats-dada2.qza \
+  --o-visualization stats-dada2.qzv
+```
+9) Rename files for easy to use commands.
+```
+mv rep-seqs-dada2.qza rep-seqs.qza
+mv table-dada2.qza table.qza
+```
 
 
 
