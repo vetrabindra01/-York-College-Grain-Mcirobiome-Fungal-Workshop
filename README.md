@@ -173,25 +173,25 @@ qiime taxa barplot \
 4) Collapse taxonomy at genus level.
 ```
 qiime taxa collapse \
-  --i-table table.qza \ 
+  --i-table table.qza \
   --i-taxonomy taxonomy.qza \
-  --p-level 6 \
-  --o-collapsed-table table-level-6.qza
+  --p-level 7 \
+  --o-collapsed-table table-level7.qza
 ```
-19) Export qza file.
+5) Export qza file.
 ```
 qiime tools export --input-path table-level-6.qza --output-path exported-Table-level-6
 
 cd exported-Table-level-6 
 ```
-20) Conver biom file to text file.
+6) Conver biom file to text file.
 ```
 biom convert -i feature-table.biom -o feature-table.txt --to-tsv
 ```
 
-21) Delete top two cantaminating plastid DNA. And save as another name.
+8) Delete top two cantaminating plastid DNA. And save as another name.
 
-22) Convert .txt file back to biom file.
+9) Convert .txt file back to biom file.
 ```
 biom convert -i feature-table-filtered.txt -o feature-table-filtered.biom --to-hdf5 --table-type="OTU table"
 
