@@ -136,8 +136,7 @@ qiime tools import \
 
    
 ## Classification of fungal ITS sequences
-[Link](https://docs.qiime2.org/2023.9/tutorials/feature-classifier/).
-"In our experience, fungal ITS classifiers trained on the UNITE reference database do NOT benefit from extracting/trimming reads to primer sites. We recommend training UNITE classifiers on the full reference sequences. Furthermore, we recommend the “developer” sequences (located within the QIIME-compatible release download) because the standard versions of the sequences have already been trimmed to the ITS region (excluding portions of flanking rRNA genes that may be present in amplicons generated with standard ITS primers)".
+Quoted from QIIME2 platform "In our experience, fungal ITS classifiers trained on the UNITE reference database do NOT benefit from extracting/trimming reads to primer sites. We recommend training UNITE classifiers on the full reference sequences. Furthermore, we recommend the “developer” sequences (located within the QIIME-compatible release download) because the standard versions of the sequences have already been trimmed to the ITS region (excluding portions of flanking rRNA genes that may be present in amplicons generated with standard ITS primers)". This step takes more than few hours on HPC.[Link](https://docs.qiime2.org/2023.9/tutorials/feature-classifier/).
 
 ```
 qiime feature-classifier fit-classifier-naive-bayes \
@@ -145,7 +144,15 @@ qiime feature-classifier fit-classifier-naive-bayes \
 --i-reference-taxonomy sh_taxonomy_qiime_ver9_dynamic_25.07.2023.qza \
 --o-classifier classifier-sh_refs_qiime_ver9_dynamic_25.07.2023.qza
 ```
+Here is the link to download the [fungal classifier](https://drive.google.com/drive/u/0/folders/1iZeHSnP7WtKxq8jWv3OQDRB9tF908HME?ths=true).
 
+4) Assign taxonomy to rep.seqs (classify features).
+```
+qiime feature-classifier classify-sklearn \
+  --i-classifier classifier-sh_refs_qiime_ver9_dynamic_25.07.2023.qza \
+  --i-reads rep-seqs.qza \
+  --o-classification taxonomy.qza
+```
 
 
 
