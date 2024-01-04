@@ -184,18 +184,12 @@ qiime tools export --input-path table-level7.qza --output-path exported-Table-le
 
 cd exported-Table-level-7 
 ```
-6) Conver biom file to text file.
-```
-biom convert -i feature-table.biom -o feature-table.txt --to-tsv
-```
 
-8) Delete top two cantaminating plastid DNA. And save as another name.
-
-9) Convert .txt file back to biom file.
+6) Convert .txt file back to biom file.
 ```
-biom normalize-table -r -i feature-table.biom -o rel-abun-feature-table-filtered.biom
+biom normalize-table -r -i feature-table.biom -o rel-abun-feature-table.biom
 
-biom convert -i rel-abun-feature-table-filtered.biom -o rel-abun-feature-table-filtered.txt --to-tsv
+biom convert -i rel-abun-feature-table.biom -o rel-abun-feature-table-filtered.txt --to-tsv
 ```
 
 
