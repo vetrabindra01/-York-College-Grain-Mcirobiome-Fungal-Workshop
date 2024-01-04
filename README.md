@@ -180,9 +180,9 @@ qiime taxa collapse \
 ```
 5) Export qza file.
 ```
-qiime tools export --input-path table-level-6.qza --output-path exported-Table-level-6
+qiime tools export --input-path table-level-6.qza --output-path exported-Table-level-7
 
-cd exported-Table-level-6 
+cd exported-Table-level-7 
 ```
 6) Conver biom file to text file.
 ```
@@ -193,9 +193,7 @@ biom convert -i feature-table.biom -o feature-table.txt --to-tsv
 
 9) Convert .txt file back to biom file.
 ```
-biom convert -i feature-table-filtered.txt -o feature-table-filtered.biom --to-hdf5 --table-type="OTU table"
-
-biom normalize-table -r -i feature-table-filtered.biom -o rel-abun-feature-table-filtered.biom
+biom normalize-table -r -i feature-table.biom -o rel-abun-feature-table-filtered.biom
 
 biom convert -i rel-abun-feature-table-filtered.biom -o rel-abun-feature-table-filtered.txt --to-tsv
 ```
