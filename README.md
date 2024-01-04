@@ -136,7 +136,7 @@ qiime tools import \
 
    
 ## Classification of fungal ITS sequences
-Quoted from QIIME2 platform "In our experience, fungal ITS classifiers trained on the UNITE reference database do NOT benefit from extracting/trimming reads to primer sites. We recommend training UNITE classifiers on the full reference sequences. Furthermore, we recommend the “developer” sequences (located within the QIIME-compatible release download) because the standard versions of the sequences have already been trimmed to the ITS region (excluding portions of flanking rRNA genes that may be present in amplicons generated with standard ITS primers)". This step takes more than few hours on HPC.[Link](https://docs.qiime2.org/2023.9/tutorials/feature-classifier/).
+Quoted from QIIME2 platform "In our experience, fungal ITS classifiers trained on the UNITE reference database do NOT benefit from extracting/trimming reads to primer sites. We recommend training UNITE classifiers on the full reference sequences. Furthermore, we recommend the “developer” sequences (located within the QIIME-compatible release download) because the standard versions of the sequences have already been trimmed to the ITS region (excluding portions of flanking rRNA genes that may be present in amplicons generated with standard ITS primers)"[Link](https://docs.qiime2.org/2023.9/tutorials/feature-classifier/). This step takes more than few hours on HPC.
 
 ```
 qiime feature-classifier fit-classifier-naive-bayes \
@@ -146,7 +146,8 @@ qiime feature-classifier fit-classifier-naive-bayes \
 ```
 Here is the link to download the [fungal classifier](https://drive.google.com/drive/u/0/folders/1iZeHSnP7WtKxq8jWv3OQDRB9tF908HME?ths=true).
 
-4) Assign taxonomy to rep.seqs (classify features).
+## Taxonomic assignment
+1) Assign taxonomy to rep.seqs (classify features). Relax! This step will take sometime maybe 15-20 mins.
 ```
 qiime feature-classifier classify-sklearn \
   --i-classifier classifier-sh_refs_qiime_ver9_dynamic_25.07.2023.qza \
@@ -154,6 +155,50 @@ qiime feature-classifier classify-sklearn \
   --o-classification taxonomy.qza
 ```
 
+2) Visualize taxonomy.
+```
+qiime metadata tabulate \
+  --m-input-file taxonomy.qza \
+  --o-visualization taxonomy.qzv
+```
+3) Make bar plots.
+```
+qiime taxa barplot \
+  --i-table table.qza \
+  --i-taxonomy taxonomy.qza \
+  --m-metadata-file sample-metadata.tsv \
+  --o-visualization taxa-bar-plots.qzv
+```
+
+4) Collapse taxonomy at genus level.
+```
+qiime taxa collapse \
+  --i-table table.qza \ 
+  --i-taxonomy taxonomy.qza \
+  --p-level 6 \
+  --o-collapsed-table table-level-6.qza
+```
+19) Export qza file.
+```
+qiime tools export --input-path table-level-6.qza --output-path exported-Table-level-6
+
+cd exported-Table-level-6 
+```
+20) Conver biom file to text file.
+```
+biom convert -i feature-table.biom -o feature-table.txt --to-tsv
+```
+
+21) Delete top two cantaminating plastid DNA. And save as another name.
+
+22) Convert .txt file back to biom file.
+```
+biom convert -i feature-table-filtered.txt -o feature-table-filtered.biom --to-hdf5 --table-type="OTU table"
+
+biom normalize-table -r -i feature-table-filtered.biom -o rel-abun-feature-table-filtered.biom
+
+biom convert -i rel-abun-feature-table-filtered.biom -o rel-abun-feature-table-filtered.txt --to-tsv
+```
 
 
 
