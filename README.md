@@ -192,12 +192,13 @@ biom normalize-table -r -i feature-table.biom -o rel-abun-feature-table.biom
 biom convert -i rel-abun-feature-table.biom -o rel-abun-feature-table.txt --to-tsv
 ```
 
+Taxonomic assignment at order level.
+<img width="669" alt="Screenshot 2024-01-04 at 4 53 58 PM" src="https://github.com/vetrabindra01/YorkCollege-Grain-Mcirobiome-Fungal-Workshop/assets/97687143/b53f0157-78ee-4e72-a463-792059059ff7">
 
 
 
-
-
-
+Taxonomic assignment at order level from [SeqCenter](https://www.seqcenter.com/).
+<img width="629" alt="Screenshot 2024-01-04 at 4 54 25 PM" src="https://github.com/vetrabindra01/YorkCollege-Grain-Mcirobiome-Fungal-Workshop/assets/97687143/4273cecb-d959-49bc-b938-3956cf8e3f25">
 
 
 
