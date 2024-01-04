@@ -189,7 +189,7 @@ cd exported-Table-level-7
 ```
 biom normalize-table -r -i feature-table.biom -o rel-abun-feature-table.biom
 
-biom convert -i rel-abun-feature-table.biom -o rel-abun-feature-table-filtered.txt --to-tsv
+biom convert -i rel-abun-feature-table.biom -o rel-abun-feature-table.txt --to-tsv
 ```
 
 
