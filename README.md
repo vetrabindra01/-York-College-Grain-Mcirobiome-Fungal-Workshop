@@ -193,7 +193,6 @@ biom convert -i rel-abun-feature-table.biom -o rel-abun-feature-table.txt --to-t
 ```
 
 Taxonomic assignment at order level.
-
 <img width="669" alt="Screenshot 2024-01-04 at 4 53 58 PM" src="https://github.com/vetrabindra01/YorkCollege-Grain-Mcirobiome-Fungal-Workshop/assets/97687143/b53f0157-78ee-4e72-a463-792059059ff7">
 
 
