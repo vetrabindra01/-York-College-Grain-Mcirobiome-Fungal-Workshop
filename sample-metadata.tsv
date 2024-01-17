@@ -1,0 +1,8 @@
+sample-id	input	filtered	percentage of input passed filter	denoised	merged	percentage of input merged	non-chimeric	percentage of input non-chimeric	Description
+#q2:types	numeric	numeric	numeric	numeric	numeric	numeric	numeric	numeric	types
+FR	275675	125928	45.68	125818	125502	45.53	124750	45.25	FR
+FRW1	210621	99437	47.21	99254	98744	46.88	96134	45.64	FRW
+FRW2	216324	94900	43.87	94757	94106	43.5	92611	42.81	FRW
+FRW3	234582	114959	49.01	114828	114350	48.75	112954	48.15	FRW
+FW	252625	131320	51.98	131070	130383	51.61	123445	48.86	FW
+negcontrol	955323	98	0.01	87	70	0.01	70	0.01	neg
